@@ -8,6 +8,11 @@
   - [Design Specifications](#design-specifications)
   - [Methodical Debugging \& Development Tips](#methodical-debugging--development-tips)
 - [CSS Cheatsheet](#css-cheatsheet)
+  - [Colors](#colors)
+  - [Typography (Text Styling)](#typography-text-styling)
+  - [Box Model (Spacing \& Sizing)](#box-model-spacing--sizing)
+  - [Layout](#layout)
+  - [Interactive States (Pseudo-classes)](#interactive-states-pseudo-classes)
   - [Flexbox (Container Properties)](#flexbox-container-properties)
   - [Flexbox (Item Properties)](#flexbox-item-properties)
   - [Grid](#grid)
@@ -100,6 +105,60 @@ Below are the design specifications showing what your product page should look l
 ## CSS Cheatsheet
 
 Here is a reference of the CSS properties we've learned. **You don't need to memorize these!** Use this as a reference while working.
+
+Here is a reference of the CSS properties we've learned. **You don't need to memorize these!** Use this as a reference while working.
+
+### Colors
+
+| Property                           | What It Does          | Example                |
+| ---------------------------------- | --------------------- | ---------------------- |
+| `color`                            | Sets text color       | `color: midnightblue;` |
+| `background` or `background-color` | Sets background color | `background: azure;`   |
+
+Color values can be: named colors (`red`, `blue`), hex codes (`#FF5733`), or RGB (`rgb(255, 87, 51)`).
+
+### Typography (Text Styling)
+
+| Property          | What It Does                | Example                           |
+| ----------------- | --------------------------- | --------------------------------- |
+| `font-family`     | Sets the font               | `font-family: Arial, sans-serif;` |
+| `font-size`       | Sets text size (use `rem`!) | `font-size: 1.5rem;`              |
+| `font-weight`     | Sets boldness               | `font-weight: bold;`              |
+| `font-style`      | Sets italic                 | `font-style: italic;`             |
+| `text-align`      | Aligns text                 | `text-align: center;`             |
+| `text-decoration` | Adds/removes underlines     | `text-decoration: none;`          |
+
+### Box Model (Spacing & Sizing)
+
+| Property                                                     | What It Does                 | Example                           |
+| ------------------------------------------------------------ | ---------------------------- | --------------------------------- |
+| `width`                                                      | Sets element width           | `width: 300px;`                   |
+| `max-width`                                                  | Sets maximum width           | `max-width: 600px;`               |
+| `padding`                                                    | Space INSIDE the border      | `padding: 20px;`                  |
+| `margin`                                                     | Space OUTSIDE the border     | `margin: 10px;`                   |
+| `border`                                                     | Creates a border (all sides) | `border: 2px solid black;`        |
+| `border-top`, `border-bottom`, `border-left`, `border-right` | Border on one side           | `border-bottom: 2px solid black;` |
+| `border-radius`                                              | Rounds corners               | `border-radius: 8px;`             |
+
+**Shorthand for padding/margin:**
+- `padding: 10px;` → all sides
+- `padding: 10px 20px;` → top/bottom, left/right
+
+### Layout
+
+| Property       | What It Does                             | Example             |
+| -------------- | ---------------------------------------- | ------------------- |
+| `margin: auto` | Centers a block element (needs a width!) | `margin: auto;`     |
+| `list-style`   | Styles/removes list bullets              | `list-style: none;` |
+
+### Interactive States (Pseudo-classes)
+
+```css
+/* When mouse hovers over element */
+a:hover {
+  background: lightblue;
+}
+```
 
 ### Flexbox (Container Properties)
 
