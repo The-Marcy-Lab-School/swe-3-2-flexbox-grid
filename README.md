@@ -7,6 +7,12 @@
 - [Build a Product Page Layout](#build-a-product-page-layout)
   - [Design Specifications](#design-specifications)
   - [Methodical Debugging \& Development Tips](#methodical-debugging--development-tips)
+- [Technical Requirements \& Building Guide](#technical-requirements--building-guide)
+  - [Part 1: HTML Structure](#part-1-html-structure)
+  - [Part 2: Flexbox Layout](#part-2-flexbox-layout)
+  - [Part 3: Grid Layout](#part-3-grid-layout)
+  - [Part 4: Media Queries (Responsive Design)](#part-4-media-queries-responsive-design)
+- [Bonus Challenges](#bonus-challenges)
 - [CSS Cheatsheet](#css-cheatsheet)
   - [Colors](#colors)
   - [Typography (Text Styling)](#typography-text-styling)
@@ -18,11 +24,6 @@
   - [Flexbox (Item Properties)](#flexbox-item-properties)
   - [Grid](#grid)
   - [Media Queries](#media-queries)
-- [Part 1: HTML Structure](#part-1-html-structure)
-- [Part 2: Flexbox Layout](#part-2-flexbox-layout)
-- [Part 3: Grid Layout](#part-3-grid-layout)
-- [Part 4: Media Queries (Responsive Design)](#part-4-media-queries-responsive-design)
-- [Bonus Challenges](#bonus-challenges)
 
 ## Reminders
 
@@ -102,6 +103,81 @@ Below are the design specifications showing what your product page should look l
 - Use your browser's Developer Tools (right-click > Inspect) to debug CSS issues
 - Resize your browser window to test responsive behavior
 - If a style isn't working, check for typos and missing semicolons!
+
+## Technical Requirements & Building Guide
+
+Use the guide below to build your page. Your assignment will be graded using the checkboxes provided.
+
+### Part 1: HTML Structure
+
+The header and footer have been provided. Your job is to build out the main content area.
+
+**Products Section Structure:**
+
+Inside `<main>`, below the `<h1>`, add the following structure:
+
+- [ ] A `<section>` to contain the sidebar and product grid
+  - [ ] Inside the section, use an `<aside>` for the sidebar
+    - [ ] Inside the aside, use an unordered list `<ul>` with list items for the categories
+  - [ ] Inside the section, next to the sidebar, use another unordered list `<ul>` for the products grid. Each list item will be a "product card" in the in the grid.
+
+**Product Card Structure:**
+
+Inside the product grid `ul`, add the following:
+- [ ] At least 6 list items. Each list item is a "product card" containing:
+  - [ ] A `<figure>` with an `<img>` and `<figcaption>` for the product name
+  - [ ] A `<p>` for the product type (e.g., "Basketball Shoes")
+  - [ ] A `<p>` for the price (e.g., "$149")
+
+**Notes:**
+- Pictures have been provided for you in the `src/img` folder. 
+- For the `alt` text, simply use `"product 1"`, `"product 2"`, etc.
+- The text content for the product type and price can be the same for all products.
+
+**Tips:**
+- Create a single product card and then use copy-paste to create multiple product cards quickly
+
+### Part 2: Flexbox Layout
+
+Use the design spec to guide your layout. The spec shows spacing values and annotations like "gap" that hint at where to use Flexbox.
+
+**Flexbox Requirements:**
+
+- [ ] Use `display: flex` on at least 4 different elements
+- [ ] Use `justify-content` to control spacing along the main axis
+- [ ] Use `align-items` to control alignment along the cross axis
+- [ ] Use `gap` to create consistent spacing between flex items
+- [ ] Use `flex-direction: column` where elements should stack vertically
+- [ ] Use `flex: 1` to make the picture grid expand to fill available space
+
+### Part 3: Grid Layout
+
+Use CSS Grid to create the product grid layout. The spec shows the grid structure and spacing.
+
+**Grid Requirements:**
+
+- [ ] Use `display: grid` on the products container
+- [ ] Use `gap` to create spacing between grid items
+
+### Part 4: Media Queries (Responsive Design)
+
+Make the product grid responsive using media queries. The grid should adapt to different screen sizes.
+
+**Media Query Requirements:**
+
+- [ ] Use `@media (min-width: 768px)` to add a second column on tablets
+- [ ] Use `@media (min-width: 992px)` to add a third column on desktops
+- [ ] Use `grid-template-columns` with the `fr` unit or `repeat()` function
+
+## Bonus Challenges
+
+If you finish early, try these enhancements:
+
+- [ ] Add a `:hover` effect to the category list items (underline and pointer cursor)
+- [ ] Make the `figcaption` bold
+- [ ] Add hover effects to the product cards (box shadow, transform scale, etc.)
+- [ ] Add a fourth column at an extra-large breakpoint (1200px)
+- [ ] Hide the categories sidebar on mobile and show it only on larger screens using `display: none` and media queries
 
 ## CSS Cheatsheet
 
@@ -244,74 +320,3 @@ Apply these to the **parent** element with `display: grid`:
 - Small devices (landscape phones): `576px`
 - Medium devices (tablets): `768px`
 - Large devices (desktops): `992px`
-
-## Part 1: HTML Structure
-
-The header and footer have been provided. Your job is to build out the main content area.
-
-**Products Section Structure:**
-
-Inside `<main>`, below the `<h1>`, add the following structure:
-
-- [ ] A `<section>` to contain the sidebar and product grid
-  - [ ] Inside the section, use an `<aside>` for the sidebar
-    - [ ] Inside the aside, use an unordered list `<ul>` with list items for the categories
-  - [ ] Inside the section, next to the sidebar, use another unordered list `<ul>` for the products grid. Each list item will be a "product card" in the in the grid.
-
-**Product Card Structure:**
-
-Inside the product grid, create at least 6 product cards. Each product card should be a list item containing:
-
-- [ ] A `<figure>` with an `<img>` and `<figcaption>` for the product name
-- [ ] A `<p>` for the product type (e.g., "Basketball Shoes")
-- [ ] A `<p>` for the price (e.g., "$149")
-
-**Notes:**
-- Pictures have been provided for you in the `src/img` folder. 
-- For the `alt` text, simply use `"product 1"`, `"product 2"`, etc.
-- The text content for the product type and price can be the same for all products.
-
-**Tips:**
-- Create a single product card and then use copy-paste to create multiple product cards quickly
-
-## Part 2: Flexbox Layout
-
-Use the design spec to guide your layout. The spec shows spacing values and annotations like "gap" that hint at where to use Flexbox.
-
-**Flexbox Requirements:**
-
-- [ ] Use `display: flex` on at least 4 different elements
-- [ ] Use `justify-content` to control spacing along the main axis
-- [ ] Use `align-items` to control alignment along the cross axis
-- [ ] Use `gap` to create consistent spacing between flex items
-- [ ] Use `flex-direction: column` where elements should stack vertically
-- [ ] Use `flex: 1` to make the picture grid expand to fill available space
-
-## Part 3: Grid Layout
-
-Use CSS Grid to create the product grid layout. The spec shows the grid structure and spacing.
-
-**Grid Requirements:**
-
-- [ ] Use `display: grid` on the products container
-- [ ] Use `gap` to create spacing between grid items
-
-## Part 4: Media Queries (Responsive Design)
-
-Make the product grid responsive using media queries. The grid should adapt to different screen sizes.
-
-**Media Query Requirements:**
-
-- [ ] Use `@media (min-width: 768px)` to add a second column on tablets
-- [ ] Use `@media (min-width: 992px)` to add a third column on desktops
-- [ ] Use `grid-template-columns` with the `fr` unit or `repeat()` function
-
-## Bonus Challenges
-
-If you finish early, try these enhancements:
-
-- [ ] Add a `:hover` effect to the category list items (underline and pointer cursor)
-- [ ] Make the `figcaption` bold
-- [ ] Add hover effects to the product cards (box shadow, transform scale, etc.)
-- [ ] Add a fourth column at an extra-large breakpoint (1200px)
-- [ ] Hide the categories sidebar on mobile and show it only on larger screens using `display: none` and media queries
